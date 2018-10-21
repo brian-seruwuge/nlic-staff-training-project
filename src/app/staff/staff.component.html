@@ -1,6 +1,5 @@
 <h2>
     Nlic/Ministry staff
-    <!----<ngbd-modal-basic></ngbd-modal-basic>-->
     <button mat-raised-button (click)="addStaff()">Add-staff</button>
 
 </h2>
@@ -16,23 +15,12 @@
         </tr>
     </thead>
 
-    <!--<tr *ngFor="let s of staff">
-        <td>{{s.Title}}</td>
-        <td> {{s.Name}}</td>
-        <td> {{s.Department}}</td>
-        <td> {{s.Action}}</td>
-    </tr>
-</table>-->
-
     <tr *ngFor="let s of staff">
         <td><input type="text" [(ngModel)]="s.Title" [disabled]="!s.isEditable"> </td>
         <td><input type="text" [(ngModel)]="s.Name" [disabled]="!s.isEditable"></td>
         <td><input type="text" [(ngModel)]="s.Department" [disabled]="!s.isEditable"></td>
         <td>
             <div>
-                <!--<button (click)="s.isEditable=!s.isEditable" *ngIf="!s.isEditable">Edit</button>
-                <button (click)="deleteStaff(i)">Delete</button>-->
-                <!---- <ngbd-dropdown-basic></ngbd-dropdown-basic>-->
                 <button mat-raised-button (click)="editStaff()">Edit</button>
                 <button mat-raised-button (click)="deleteStaff()">Delete</button>
             </div>
@@ -40,23 +28,4 @@
     </tr>
 </table>
 
-
-
-
-
-<!----<h4>Add New staff</h4>
-<form>
-    <div>
-
-        <input type="text" [(ngModel)]="Title" name="Title" placeholder="title" /><br>
-        <input type="text" [(ngModel)]="Name" name="name" placeholder="Name" /><br>
-        <input type="text" [(ngModel)]="Department" name="Department" placeholder="Department" /><br>
-        <input type="text" [(ngModel)]="Action" name="Action" placeholder="Action" /><br>
-        <br>
-    </div>
-    <div>
-        <div>
-            <input type="submit" value="Submit" class="" (click)="addStaff()" />
-        </div>
-    </div>
-</form>-->
+{{deleteStaff()}}

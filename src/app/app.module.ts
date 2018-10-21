@@ -13,7 +13,6 @@ import { AddStaffComponent } from './add-staff/add-staff.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
-import { DeleteStaffComponent } from './delete-staff/delete-staff.component';
 import { EditStaffComponent } from './edit-staff/edit-staff.component';
 import { TrainingService } from './services/training.service';
 
@@ -35,7 +34,6 @@ const appRoutes: Routes=[
     TrainingComponent,
     SessionComponent,
     AddStaffComponent,
-    DeleteStaffComponent,
     EditStaffComponent
   ],
   imports: [
@@ -52,6 +50,6 @@ const appRoutes: Routes=[
   ],
   providers: [TrainingService],
   bootstrap: [AppComponent],
-  entryComponents:[AddStaffComponent, DeleteStaffComponent, EditStaffComponent   ]
+  entryComponents:[AddStaffComponent, EditStaffComponent]
 })
 export class AppModule { }
